@@ -1,10 +1,11 @@
 //import logo from './logo.svg';
 import './App.css';
+import VodApp from './vodComps/vodApp';
 
 function App() {
   return (
     <div className="App">
-      <h1>react start</h1>
+      <VodApp/>
     </div>
   );
 }
