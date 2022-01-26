@@ -1,0 +1,39 @@
+  /* header start */
+  header a{
+      color: white;
+    text-decoration: none;
+    padding:0 8px;
+  }
+  header a:hover{
+      color: #ffc107;
+        }
+  input{
+      border: none;
+      outline: none;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px ;
+  }
+  button{
+      background: #ffc107;
+      border:1px orange solid;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px ;
+      transition: 0.5s;
+      opacity: 1;
+  }
+  button:hover{
+       opacity:0.9
+}
+  /* header end */
+
+  /* strip */
+  .strip{
+    min-height: 250px;
+    background-size: cover;
+    background-position:top center;
+  }
+
+
+
+  /* all */
+

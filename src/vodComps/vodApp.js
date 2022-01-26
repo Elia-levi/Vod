@@ -25,7 +25,6 @@ function VodApp(props) {
 
 
     return (
-        <div>
             <Router>
                 <Routes>
                     <Route path="/" element={<LayoutVod />} >
@@ -34,7 +33,6 @@ function VodApp(props) {
                     </Route>
                 </Routes>
             </Router>
-        </div>
     )
 }
 
