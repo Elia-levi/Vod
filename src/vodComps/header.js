@@ -8,7 +8,7 @@ function Header(props){
         <div className="container ">
           <div className='row align-items-center '>
             <div className='col-lg-2 '>
-              <h4 className='h3 '><a href="/"><i class="fa fa-film" aria-hidden="true"></i> Movie</a></h4>
+              <h4 className='h3 '><a href="/"><i className="fa fa-film" aria-hidden="true"></i> Movie</a></h4>
             </div>
             <div className='col-lg-6'>
               <nav >
