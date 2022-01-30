@@ -6,7 +6,7 @@ import Strip from './strip';
 function LayoutVod(props) {
   return (
     <React.Fragment>
-      <Header setSearch={props.setSearch}/>
+      <Header />
       <Strip/>
       <main >
         <Outlet />

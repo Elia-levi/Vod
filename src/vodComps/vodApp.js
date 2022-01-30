@@ -9,12 +9,14 @@ function VodApp(props) {
     const[search,setSearch]=("bank")
     const [ar, setAr] = useState([]);
 
+
+
     useEffect(() => {
         doApi();
     }, [search])
 
     const doApi = async () => {
-        let url = `https://www.omdbapi.com/?s=${search}&apikey=8662ecc3`;
+        let url = `https://www.omdbapi.com/?s=bank&apikey=8662ecc3`;
         let resp = await axios.get(url);
         console.log(resp.data.Search);
         setAr(resp.data.Search);
@@ -24,7 +26,7 @@ function VodApp(props) {
     return (
             <Router>
                 <Routes>
-                    <Route path="/" element={<LayoutVod setSearch={setSearch}/>} >
+                    <Route path="/" element={<LayoutVod />} >
                         <Route index element={<HomeVod  vod_ar={ar}/>} />
                         {/* <Route path="/settings" element={<Settings />} /> */}
                     </Route>

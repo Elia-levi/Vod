@@ -21,7 +21,7 @@ function Header(props){
             <div className=' col-lg-4  d-flex float-end'>
             <input ref={searchRef} placeholder=' Search...' type="search" className=' p-1 ps-2'/>
             <button onClick={()=>{
-              props.setSearch(searchRef.current.value)
+              
             }}>Search</button>
             </div>
           </div>
