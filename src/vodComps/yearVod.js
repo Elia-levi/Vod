@@ -8,14 +8,15 @@ function YearVod(props) {
 
     const [search, setSearch] = useState('red')
     const [ar, setAr] = useState([]);
-    const params = useParams();
+    let params = useParams();
+    let years=params.YYYY;
 
     useEffect(() => {
         doApi();
     }, [search])
 
     const doApi = async () => {
-        let url = `https://www.omdbapi.com/?s=${search}&Y=${params.Y}&apikey=8662ecc3`;
+        let url = `https://www.omdbapi.com/?s=${search}&y=${years}&apikey=8662ecc3`;
         let resp = await axios.get(url);
         console.log(resp.data.Search);
         setAr(resp.data.Search);
