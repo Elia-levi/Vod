@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 
 function Header(props){
+  let searchRef=useRef();
     return(
         <header className="p-3   container-fluid  ">
         <div className="container ">
@@ -18,8 +19,10 @@ function Header(props){
               </nav>
             </div>
             <div className=' col-lg-4  d-flex float-end'>
-            <input placeholder=' Search...' type="search" className=' p-1 ps-2'/>
-            <button>Search</button>
+            <input ref={searchRef} placeholder=' Search...' type="search" className=' p-1 ps-2'/>
+            <button onClick={()=>{
+              props.setSearch(searchRef.current.value)
+            }}>Search</button>
             </div>
           </div>
         </div>
