@@ -13,7 +13,7 @@ function VodApp(props) {
 
     useEffect(() => {
         doApi();
-    }, [search])
+    }, [])
 
     const doApi = async () => {
         let url = `https://www.omdbapi.com/?s=bank&apikey=8662ecc3`;
