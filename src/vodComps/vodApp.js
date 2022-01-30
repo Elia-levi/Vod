@@ -13,7 +13,7 @@ function VodApp(props) {
     }, [])
 
     const doApi = async () => {
-        let url = `https://www.omdbapi.com/?s=bank&page=1&apikey=8662ecc3`;
+        let url = `https://www.omdbapi.com/?s=spider-man&page=1&apikey=8662ecc3`;
         let resp = await axios.get(url);
         console.log(resp.data.Search);
         setAr(resp.data.Search);
