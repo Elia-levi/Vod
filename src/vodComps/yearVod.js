@@ -7,14 +7,14 @@ import VodItem from './vodItem';
 function YearVod(props) {
 
     const [ar, setAr] = useState([]);
-    let params = useParams();
+    let param = useParams();
 
     useEffect(() => {
         doApi();
-    }, [])
+    }, [param])
 
     const doApi = async () => {
-        let url = `https://www.omdbapi.com/?s=black&apikey=8662ecc3`;
+        let url = `https://www.omdbapi.com/?s=bank&y=${param.YYYY}&apikey=8662ecc3`;
         let resp = await axios.get(url);
         console.log(resp.data.Search);
         setAr(resp.data.Search);
