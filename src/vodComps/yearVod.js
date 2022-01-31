@@ -26,7 +26,7 @@ function YearVod(props) {
                                 <VodItem key={item.imdbID}  item={item}/>
                             )
                         })}
-                    </div>:<h2 className='ps-5 text-light pt-3 display-6'>The page not found!</h2>}
+                    </div>:<h2 className='ps-5 text-light pt-3 display-6'> Page not found!</h2>}
                 </div>
 
     )

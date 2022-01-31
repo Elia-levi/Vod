@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {  useParams } from 'react-router-dom';
+import {   useParams } from 'react-router-dom';
 
 import axios from 'axios';
 import VodItem from './vodItem';
@@ -26,7 +26,7 @@ function SearchVod(props) {
                         <VodItem key={item.imdbID} item={item} />
                     )
                 })}
-            </div>:<h2 className='ps-5 text-light pt-3 display-6'>No results found!</h2>}
+            </div>:<h2 className='ps-5 text-light pt-3 '>The movie <span className='text-danger'>{param.searchQ}</span> is not a Found !</h2>}
         </div>
 
     )
