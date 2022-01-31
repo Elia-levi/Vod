@@ -9,6 +9,7 @@ function LayoutVod(props) {
       <main  className='container-fluid  pb-4'>
         <Outlet />
       </main>
+      
       <footer className='bgFooter text-light container-fluid  text-center p-5 '>
         <div>the best movie in the world</div>
       </footer>
