@@ -9,11 +9,11 @@ function SearchVod(props) {
     let param = useParams();
 
     useEffect(() => {
-        doApi(param);
+        doApi(param.searchQ);
     }, [param])
 
-    const doApi = async (param) => {
-        let url = `https://www.omdbapi.com/?s=${param.searchQ}&apikey=8662ecc3`;
+    const doApi = async (_param) => {
+        let url = `https://www.omdbapi.com/?s=${_param}&apikey=8662ecc3`;
             let resp = await axios.get(url);
             setAr(resp.data.Search);
  

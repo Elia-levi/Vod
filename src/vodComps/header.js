@@ -15,7 +15,7 @@ function Header(props) {
         <div className="container ">
           <div className='row align-items-center '>
             <div className='col-lg-2 col-sm-6'>
-              <h4 className='h3 '><a href="/"><i className="fa fa-film" aria-hidden="true"></i> Movie</a></h4>
+              <h4 className='h3 '><Link to="/"><i className="fa fa-film" aria-hidden="true"></i> Movie</Link></h4>
             </div>
             <div className='col-lg-6 col-sm-6'>
               <nav >
@@ -30,7 +30,8 @@ function Header(props) {
             <div className=' col-lg-4  d-flex   justify-content-center justify-content-lg-end'>
               <input ref={searchRef}  placeholder=' Search...' type="search" className=' p-1 ps-2' />
               <button onClick={()=>{
-                nav("/search/"+searchRef.current.value)
+                {(searchRef.current.value)?
+                nav("/search/"+searchRef.current.value) : nav("/")}
               }}>Search</button>
             </div>
           </div>
