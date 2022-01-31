@@ -1,11 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useRef } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import Strip from './strip';
 
 
 
 function Header(props) {
-
+  let searchRef=useRef();
+  let nav=useNavigate();
 
 
   return (
@@ -27,8 +28,10 @@ function Header(props) {
               </nav>
             </div>
             <div className=' col-lg-4  d-flex   justify-content-center justify-content-lg-end'>
-              <input  placeholder=' Search...' type="search" className=' p-1 ps-2' />
-              <button >Search</button>
+              <input ref={searchRef}  placeholder=' Search...' type="search" className=' p-1 ps-2' />
+              <button onClick={()=>{
+                nav("/search/"+searchRef.current.value)
+              }}>Search</button>
             </div>
           </div>
         </div>
