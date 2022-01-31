@@ -9,24 +9,24 @@ function SearchVod(props) {
     let param = useParams();
 
     useEffect(() => {
-        doApi();
+        doApi(param);
     }, [param])
 
-    const doApi = async () => {
+    const doApi = async (param) => {
         let url = `https://www.omdbapi.com/?s=${param.searchQ}&apikey=8662ecc3`;
             let resp = await axios.get(url);
             setAr(resp.data.Search);
  
     }
     return (
-        <div className='container'>
+        <div className='container'>{(ar)?
              <div className='row pt-4'>
                 {ar.map(item => {
                     return (
                         <VodItem key={item.imdbID} item={item} />
                     )
                 })}
-            </div>
+            </div>:<h2 className='ps-5 text-light pt-3 display-6'>No results found!</h2>}
         </div>
 
     )

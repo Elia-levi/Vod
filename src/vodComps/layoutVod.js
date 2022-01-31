@@ -3,6 +3,8 @@ import {  Outlet } from 'react-router-dom';
 import Header from './header';
 
 function LayoutVod(props) {
+  const currentYear = (new Date().getFullYear())
+
   return (
     <React.Fragment>
       <Header />
@@ -11,7 +13,7 @@ function LayoutVod(props) {
       </main>
       
       <footer className='bg-footer text-light container-fluid  text-center p-5 '>
-        <div>the best movie in the world</div>
+        <div>  The best movie Elia-levi {currentYear}.</div>
       </footer>
     </React.Fragment>
   )
