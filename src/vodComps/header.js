@@ -1,16 +1,18 @@
 import React, { useContext, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ContextVod } from "../context/contextVod"
+import Strip from './strip';
 
 
 
-function Header(props){
-  let searchRef=useRef();
-  let {setSearch} = useContext(ContextVod)
+function Header(props) {
+  let searchRef = useRef();
+  let { setSearch } = useContext(ContextVod)
 
 
-    return(
-        <header className="p-3   container-fluid  ">
+  return (
+    <React.Fragment>
+      <header className="p-3   container-fluid  ">
         <div className="container ">
           <div className='row align-items-center '>
             <div className='col-lg-2 col-sm-6'>
@@ -27,16 +29,19 @@ function Header(props){
               </nav>
             </div>
             <div className=' col-lg-4  d-flex float-end'>
-            <input ref={searchRef} placeholder=' Search...' type="search" className=' p-1 ps-2'/>
-            <button onClick={()=>{
-              setSearch(searchRef.current.value)
-            }}>Search</button>
+              <input ref={searchRef} placeholder=' Search...' type="search" className=' p-1 ps-2' />
+              <button onClick={() => {
+                setSearch(searchRef.current.value)
+              }}>Search</button>
             </div>
           </div>
         </div>
       </header>
-      
-    )
+      <Strip />
+    </React.Fragment>
+
+
+  )
 }
 
 export default Header

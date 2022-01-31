@@ -1,14 +1,12 @@
 import React from 'react';
 import {  Outlet } from 'react-router-dom';
 import Header from './header';
-import Strip from './strip';
 
 function LayoutVod(props) {
   return (
     <React.Fragment>
       <Header />
-      <Strip/>
-      <main >
+      <main  className='container-fluid  pb-4'>
         <Outlet />
       </main>
       <footer className='bgFooter text-light container-fluid  text-center p-5 '>
