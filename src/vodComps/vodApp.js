@@ -5,6 +5,7 @@ import LayoutVod from './layoutVod';
 import HomeVod from './homeVod';
 import YearVod from './yearVod';
 import SearchVod from './searchVod';
+import VideoInfo from './videoInfo';
 
 
 function VodApp(props) {
@@ -18,6 +19,7 @@ function VodApp(props) {
                         <Route index element={<HomeVod />} />
                         <Route path="/year/:YYYY" element={<YearVod />} />
                         <Route path="/search/:searchQ" element={<SearchVod />} />
+                        <Route path="/video/:id" element={<VideoInfo />} />
 
                     </Route>
                 </Routes>
