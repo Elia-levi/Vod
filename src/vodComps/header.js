@@ -28,7 +28,7 @@ function Header(props) {
                 <Link to="/year/:1989">1989</Link>
               </nav>
             </div>
-            <div className=' col-lg-4  d-flex float-end'>
+            <div className=' col-lg-4  d-flex   justify-content-center justify-content-lg-end'>
               <input ref={searchRef} placeholder=' Search...' type="search" className=' p-1 ps-2' />
               <button onClick={() => {
                 setSearch(searchRef.current.value)
