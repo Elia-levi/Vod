@@ -7,8 +7,6 @@ import VodItem from './vodItem';
 function HomeVod(props) {
     const [ar, setAr] = useState([]);
 
-
-
     useEffect(() => {
         doApi();
     }, [])
@@ -16,7 +14,6 @@ function HomeVod(props) {
     const doApi = async () => {
         let url = `https://www.omdbapi.com/?s=bank&apikey=8662ecc3`;
         let resp = await axios.get(url);
-        console.log(resp.data.Search);
         setAr(resp.data.Search);
     }
     return (  
