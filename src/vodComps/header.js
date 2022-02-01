@@ -11,8 +11,6 @@ function Header(props) {
   const seracs=()=>{
       {(searchRef.current.value)?
       nav("/search/"+searchRef.current.value) : nav("/")}
-    
-
   }
 
 
@@ -24,7 +22,7 @@ function Header(props) {
             <div className='col-lg-2 col-sm-6'>
               <h4 className='h3 '><Link to="/"><i className="fa fa-film" aria-hidden="true"></i> Movie</Link></h4>
             </div>
-            <div className='col-lg-6 col-sm-6'>
+            <div className='col-lg-6 col-sm-6 '>
               <nav >
                 <Link to="/year/2021">2021</Link>
                 <Link to="/year/2020">2020</Link>
@@ -33,7 +31,7 @@ function Header(props) {
                 <Link to="/year/1989">1989</Link>
               </nav>
             </div>
-            <div className=' col-lg-4  d-flex   justify-content-center justify-content-lg-end'>
+            <div className=' col-lg-4  d-flex  justify-content-md-center  justify-content-lg-end '>
               <input ref={searchRef}  placeholder=' Search...' type="search" className=' p-1 ps-2' />
               <button  onClick={seracs}>Search</button>
             </div>

@@ -27,7 +27,7 @@ function SearchVod(props) {
                         <VodItem key={item.imdbID} item={item} />
                     )
                 })}
-            </div>:<h2 className='ps-5 text-light pt-3 '>The movie <span className='text-danger'>{param.searchQ}</span> is not a Found !</h2>}
+            </div>:<h2 className='ps-5 text-light pt-3 '>The movie is not a Found !</h2>}
         </div>
 
     )

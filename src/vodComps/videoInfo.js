@@ -16,9 +16,9 @@ function VideoInfo(props) {
         let url = `https://www.omdbapi.com/?i=${param.id}&apikey=8662ecc3`;
         let resp = await axios.get(url);
         setItem(resp.data);
-        console.log(resp.data);
     }
 
+    
 
     return (
         <div className='container'>
