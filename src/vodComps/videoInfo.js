@@ -29,8 +29,10 @@ function VideoInfo(props) {
                     <h4 className='fw-light fs-5'><span className='fw-bolder fs-4 '>Genre:</span> {item.Genre}.</h4>
                     <h4 className='fw-light fs-5'><span className='fw-bolder fs-4'>Actors:</span> {item.Actors}.</h4>
                     <h4 className='fw-light fs-5'><span className='fw-bolder fs-4'>Year:</span> {item.Year}.</h4>
+                    <h4 className='fw-light fs-5'><span className='fw-bolder fs-4'>Votes:</span> {item.imdbVotes} </h4>
                     <h4 className='fw-light fs-5'><span className='fw-bolder fs-4'>Rating:</span> {item.imdbRating} </h4>
-                    <Link  to={"/"} className='btn btn-danger my-2 '>Beack home</Link>
+
+                    <Link  to={"/"} className='btn btn-danger my-2 '>back home</Link>
                 </div>
             <div className='col-lg-4 my-lg-4 mt-sm-5 col-md-6 ord'>
                     {(item.Poster !== "N/A") ? <img src={item.Poster} className='img-info  shadow'  alt={item.Title} />
