@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
-import { useState } from 'react/cjs/react.development';
+
 
 
 function VideoInfo(props) {
@@ -26,10 +26,11 @@ function VideoInfo(props) {
             <div className='info-text col-lg-8 col-md-6 my-md-4'>
                     <h2 className='h2-info'>{item.Title}.</h2>
                     <p className='ps-2'>{item.Plot}</p>
-                    <h4><span className='fw-bolder '>Genre:</span> {item.Genre}.</h4>
-                    <h4><span className='fw-bolder '>Year:</span> {item.Year}.</h4>
-                    <h4><span className='fw-bolder '>Rating:</span> {item.imdbRating} </h4>
-                    <Link to={"/"} className='btn btn-danger my-2 '>Beack</Link>
+                    <h4 className='fw-light fs-5'><span className='fw-bolder fs-4 '>Genre:</span> {item.Genre}.</h4>
+                    <h4 className='fw-light fs-5'><span className='fw-bolder fs-4'>Actors:</span> {item.Actors}.</h4>
+                    <h4 className='fw-light fs-5'><span className='fw-bolder fs-4'>Year:</span> {item.Year}.</h4>
+                    <h4 className='fw-light fs-5'><span className='fw-bolder fs-4'>Rating:</span> {item.imdbRating} </h4>
+                    <Link  to={"/"} className='btn btn-danger my-2 '>Beack home</Link>
                 </div>
             <div className='col-lg-4 my-lg-4 mt-sm-5 col-md-6 ord'>
                     {(item.Poster !== "N/A") ? <img src={item.Poster} className='img-info  shadow'  alt={item.Title} />
