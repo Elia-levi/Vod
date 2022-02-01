@@ -28,7 +28,7 @@ function Header(props) {
             </div>
             <div className=' col-lg-4  d-flex   justify-content-center justify-content-lg-end'>
               <input ref={searchRef}  placeholder=' Search...' type="search" className=' p-1 ps-2' />
-              <button onClick={()=>{
+              <button  onClick={()=>{
                 {(searchRef.current.value)?
                 nav("/search/"+searchRef.current.value) : nav("/")}
               }}>Search</button>

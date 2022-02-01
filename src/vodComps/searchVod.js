@@ -16,8 +16,9 @@ function SearchVod(props) {
         let url = `https://www.omdbapi.com/?s=${_param}&apikey=8662ecc3`;
             let resp = await axios.get(url);
             setAr(resp.data.Search);
- 
+
     }
+    
     return (
         <div className='container'>{(ar)?
              <div className='row pt-4'>
