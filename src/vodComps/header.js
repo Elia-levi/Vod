@@ -19,7 +19,6 @@ function Header(props) {
             </div>
             <div className='col-lg-6 col-sm-6'>
               <nav >
-                <Link to="/">Home </Link>
                 <Link to="/year/2021">2021</Link>
                 <Link to="/year/2020">2020</Link>
                 <Link to="/year/2000">2000</Link>
