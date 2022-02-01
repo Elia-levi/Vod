@@ -12,7 +12,7 @@ function LayoutVod(props) {
         <Outlet />
       </main>
       
-      <footer className='bg-footer text-light container-fluid  text-center p-5 '>
+      <footer className='bg-footer text-light container-fluid  text-center p-4 '>
         <div>  The best movie Elia-levi {currentYear}.</div>
       </footer>
     </React.Fragment>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {  useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import VodItem from './vodItem';
 
@@ -19,15 +19,17 @@ function YearVod(props) {
         setAr(resp.data.Search);
     }
     return (
-                <div className='container'>{(ar)?
-                    <div className='row pt-4'>
-                        {ar.map(item => {
-                            return (
-                                <VodItem key={item.imdbID}  item={item}/>
-                            )
-                        })}
-                    </div>:<h2 className='ps-5 text-light pt-3 display-6'> Page not found!</h2>}
-                </div>
+
+        <div className='container'>{(ar) ?
+            <div className='row pt-4'>
+                {ar.map(item => {
+                    return (
+                        <VodItem key={item.imdbID} item={item} />
+
+                    )
+                })}
+            </div> : <h2 className='ps-5 text-light pt-3 display-6'> Page not found!</h2>}
+        </div>
 
     )
 }
