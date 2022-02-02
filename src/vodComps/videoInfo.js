@@ -40,7 +40,7 @@ function VideoInfo(props) {
                     <button onClick={() => nav(-1)} className='btn btn-danger my-5 '>back </button>
                 </div>
 
-            </div> : <h2 className='ps-5 text-light pt-3 display-6'>Login...</h2>}
+            </div> : <h2 className='ps-5 text-light pt-3 display-6'>Loading...</h2>}
         </div>
 
     )
