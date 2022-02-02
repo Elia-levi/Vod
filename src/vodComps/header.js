@@ -20,7 +20,7 @@ function Header(props) {
         <div className="container ">
           <div className='row align-items-center '>
             <div className='col-lg-2 col-sm-6'>
-              <h4 className='h3 '><Link to="/"><i className="fa fa-film" aria-hidden="true"></i> Movie</Link></h4>
+              <h2 className='h3 '><Link to="/"><i className="fa fa-film" aria-hidden="true"></i> Movie</Link></h2>
             </div>
             <div className='col-lg-6 col-sm-6 '>
               <nav >
