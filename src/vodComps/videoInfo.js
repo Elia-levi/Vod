@@ -25,7 +25,7 @@ function VideoInfo(props) {
     return (
         <div className='container'>
             {(item.Title) ? <div className='row'>
-            <div className='col-lg-4 my-lg-4 mt-sm-5 col-md-6 ord '>
+                <div className='col-lg-4 my-lg-4 mt-sm-5 col-md-6 ord '>
                     {(item.Poster !== "N/A") ? <img src={item.Poster} className='img-info  shadow' alt={item.Title} />
                         : <img src={"https://images.pexels.com/photos/356079/pexels-photo-356079.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"} className='img-info  shadow' alt={item.Title} />}
                 </div>
