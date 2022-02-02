@@ -18,7 +18,7 @@ function HomeVod(props) {
     }
     return (
         <div className='container'>
-            {ar.length == 0 ? <h2 className='ps-5 text-light pt-3 display-6'>Loading...</h2> : ""}
+            {ar.length === 0 ? <h2 className='ps-5 text-light pt-3 display-6'>Loading...</h2> : ""}
             <div className='row pt-4'>
                 {ar.map(item => {
                     return (
