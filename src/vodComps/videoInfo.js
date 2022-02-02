@@ -25,6 +25,10 @@ function VideoInfo(props) {
     return (
         <div className='container'>
             {(item.Title) ? <div className='row'>
+            <div className='col-lg-4 my-lg-4 mt-sm-5 col-md-6 ord '>
+                    {(item.Poster !== "N/A") ? <img src={item.Poster} className='img-info  shadow' alt={item.Title} />
+                        : <img src={"https://images.pexels.com/photos/356079/pexels-photo-356079.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"} className='img-info  shadow' alt={item.Title} />}
+                </div>
                 <div className='info-text col-lg-8 col-md-6 my-md-4'>
                     <h2 className='h2-info'>{item.Title}.</h2>
                     <p className='ps-2'>{item.Plot}</p>
@@ -33,12 +37,9 @@ function VideoInfo(props) {
                     <h4 className='fw-light fs-5'><span className='fw-bolder fs-4'>Year:</span> {item.Year}.</h4>
                     <h4 className='fw-light fs-5'><span className='fw-bolder fs-4'>Votes:</span> {item.imdbVotes} </h4>
                     <h4 className='fw-light fs-5'><span className='fw-bolder fs-4'>Rating:</span> {item.imdbRating} </h4>
-                    <button onClick={() => nav(-1)} className='btn btn-danger my-2 '>back </button>
+                    <button onClick={() => nav(-1)} className='btn btn-danger my-5 '>back </button>
                 </div>
-                <div className='col-lg-4 my-lg-4 mt-sm-5 col-md-6 ord'>
-                    {(item.Poster !== "N/A") ? <img src={item.Poster} className='img-info  shadow' alt={item.Title} />
-                        : <img src={"https://images.pexels.com/photos/356079/pexels-photo-356079.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"} className='img-info  shadow' alt={item.Title} />}
-                </div>
+
             </div> : <h2 className='ps-5 text-light pt-3 display-6'>Login...</h2>}
         </div>
 

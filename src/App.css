@@ -101,10 +101,7 @@
 }
 
 
-.ord
-{
-  order: 1;
-}
+
 
 /* vidoInfo end */
 
@@ -128,10 +125,10 @@ main{
 
 @media (max-width:450px){
   .ord{
-  order: -1;
   margin: 16px 0;
   display: inline-flex;
     justify-content: center;
+
 }
 .h2-info{
   text-align: center;
