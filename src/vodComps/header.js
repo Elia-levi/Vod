@@ -13,6 +13,12 @@ function Header(props) {
       nav("/search/"+searchRef.current.value) : nav("/")}
   }
 
+  const onKeyboardClick = (e) => {
+    if(e.key === "Enter"){
+      seracs();
+    }
+  }
+
 
   return (
     <React.Fragment>
@@ -32,7 +38,7 @@ function Header(props) {
               </nav>
             </div>
             <div className=' col-lg-4  d-flex  justify-content-md-center  justify-content-lg-end '>
-              <input ref={searchRef}  placeholder=' Search...' type="search" className=' p-1 ps-2' />
+              <input onKeyDown={onKeyboardClick} ref={searchRef}  placeholder=' Search...' type="search" className=' p-1 ps-2' />
               <button  onClick={seracs}><i className="fa fa-search" aria-hidden="true"></i></button>
             </div>
           </div>

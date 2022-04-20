@@ -6,16 +6,36 @@ import VodItem from './vodItem';
 
 function SearchVod(props) {
     const [ar, setAr] = useState([]);
+    let endScreen = false;
+    let page = 1;
     let param = useParams();
 
     useEffect(() => {
-        doApi(param.searchQ);
+        doApi(param.searchQ,page);
+        window.addEventListener("scroll", onScroll)
+        return () => {
+          window.removeEventListener("scroll",onScroll);
+        }
     }, [param])
 
-    const doApi = async (_param) => {
-        let url = `https://www.omdbapi.com/?s=${_param}&apikey=8662ecc3`;
+    const onScroll = () => {
+        if(window.innerHeight + document.documentElement.scrollTop >= document.documentElement.offsetHeight - 1 && !endScreen){
+          endScreen = true;
+          console.log("end")
+          page++;
+          doApi(param.searchQ,page);
+        }
+      }
+
+    const doApi = async (_param,_pageNum) => {
+        let url = `https://www.omdbapi.com/?s=${_param}&page=${_pageNum}&apikey=8662ecc3`;
             let resp = await axios.get(url);
-            setAr(resp.data.Search);
+            // setAr(resp.data.Search);
+            setAr((ar) => [...ar, ...resp.data.Search]);
+            // בודקים אם יש עוד פריטים בעמוד שאספנו ממנו
+            if(resp.data.Search.length > 0){
+              endScreen = false;
+            }
 
     }
     
